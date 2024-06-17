@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Google Maps</title>
+        <script defer src="weather.js"></script>
+        <link rel="stylesheet" type="text/css" href="weather.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    </head> 
+    <body>
+        <!-- 주소 검색 -->
+        <div class = "search">
+            <label for="address">주소 : </label>
+            <input type="text" id="searchKeyword" placeholder="검색하고자 하는 주소를 입력하세요.">
+            <button onclick="codeAddress()"><img src="search.png" alt="버튼"></button>
+        </div>
+
+        <div id="googleMap"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0xAjvNzvyWdiKrSTdQzlQATEazA9ZLJk&callback=myMap"></script>
+        
+        <!-- 검색 결과 위도, 경도 표시 -->
+        <div >
+            <table class="table" >
+                <colgroup>
+                    <col style="width:auto">
+                    <col style="width:auto">
+                    <col style="width:auto">
+                    <col style="width:10%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>도시명</th>
+                        <th>위도</th>
+                        <th>경도</th>
+                        <th>날씨</th>
+                    </tr>
+                </thead>
+                <tbody id="positionList"> 
+                    <tr>
+                        <td style="height: 50px;" colspan="4"> 조회 내역이 없습니다. </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 날씨 보기 -->
+        <div >
+            <table class="table" >
+                <colgroup>
+                    <col style="width:auto">
+                    <col style="width:auto">
+                    <col style="width:auto">
+                    <col style="width: 10%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>현재온도</th>
+                        <th>현재습도</th>
+                        <th>날씨</th>
+                        <th>바람</th>
+                        <th>구름</th>
+                    </tr>
+                </thead>
+                <tbody id="weatherList">
+                    <tr>
+                        <td style="height: 50px;" colspan="5"> 조회 내역이 없습니다. </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
