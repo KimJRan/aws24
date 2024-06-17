@@ -53,7 +53,7 @@ function weather() {
   var lat = document.getElementById('lat').value;
   var lon = document.getElementById('lon').value;
   
-  var apiURI ="http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=7e7812e2a990e09e5af06b8520a13285";
+  var apiURI ="http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=YOUR_API_KEY";
   
   // Fetch API를 사용하여 데이터를 가져옵니다.
   fetch(apiURI)
